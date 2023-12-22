@@ -1,6 +1,10 @@
 <template>
-  <el-popover :open-delay="150" placement="top-start" width="400" :disabled="status <= 2">
-    <div slot="reference" class="architecture-block" :class="['architecture-block-' + status]" v-if="data">
+  <!-- 弹出框组件 open-delay触发延迟 placement显示位置 trigger触发方式 disabled禁用 @show显示回调-->
+  <el-popover :open-delay="150" placement="top-start" width="400" trigger="hover" :disabled="status <= 2" @show="handleShow(data.id)">
+    <!-- 使用名片组件 -->
+    <CardInformation :data="data" :hoverData="hoverDataValue" />
+    <!-- Slot reference 触发 Popover 显示的 HTML 元素-->
+    <div slot="reference" class="architecture-block" :class="['architecture-block-' + status]" @click="handleLoadData" v-if="data">
       <div class="avatar-container">
         <el-avatar :src="data.avatar" class="avatar">
         </el-avatar>
@@ -12,15 +16,20 @@
     </div>
   </el-popover>
 </template>
-
 <script>
 /**
  * 组织结构 人员组件
  * 四种级别对应四种样式
  */
+
+// 个人信息卡片
+import CardInformation from '../modal/components/card_information.vue';
+
+// 接口
+import { getPersonnelSimpleInfo } from '@/api/architecture';
 export default {
   name: 'architecture-block',
-  components: {},
+  components: { CardInformation },
   data() {
     return {
       hoverDataValue: {}
@@ -42,7 +51,16 @@ export default {
       type: Number
     }
   },
-  methods: {}
+  methods: {
+    /**
+     * show回调 获取人员信息
+     */
+    async handleShow(id) {
+      let res = await getPersonnelSimpleInfo(id);
+      this.hoverDataValue = res.entity;
+    },
+
+  }
 };
 </script>
 
@@ -82,7 +100,7 @@ export default {
   }
 }
 
-// 第一级别
+/* 第一级别 */
 .architecture-block-1 {
   background: linear-gradient(180deg, #2186ff 0%, #9bc7ff 100%);
   box-shadow: 0px 0px 14px 0px rgba(37, 136, 255, 0.5);

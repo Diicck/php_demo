@@ -8,3 +8,11 @@ export function getFindOrganization() {
         data: {}
     })
 }
+// 展示员工信息卡 hover
+export function getPersonnelSimpleInfo(id) {
+    return request({
+        url: `/personnel/simpleInfo?id=${id}`,
+        method: 'get',
+        data: {}
+    })
+}
