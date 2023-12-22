@@ -1,6 +1,6 @@
 # php_demo
 
-## 项目设置
+## 项目加载组件
 ```
 npm install
 ```
@@ -15,5 +15,8 @@ npm run serve
 npm run build
 ```
 
-### 自定义配置
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### PHP后端Apidoc启动
+```
+cd server
+php think run
+```
