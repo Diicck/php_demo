@@ -12,6 +12,7 @@ module.exports = defineConfig({
     // 配置代理，用于将请求代理到后端API服务器
     proxy: {
       // 当请求的路径以/api开头时，将请求代理到process.env.VUE_APP_API指定的地址
+      //http://47.94.101.66:8083/ostudent/
       '/api': {
         target: process.env.VUE_APP_API,
         // 启用跨域
