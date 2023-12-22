@@ -13,7 +13,7 @@ export default {
   props:{
       nowYear1: {
           type:Number,
-          default: 2022
+          default: 2023
       }
   }
 };
