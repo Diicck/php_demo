@@ -80,6 +80,11 @@ export default {
   },
   methods: {
 
+    handleLoadData(data) {
+      // 打开员工档案弹窗，并传递人员信息数据
+      this.$bus.$emit('modal:dialg-staff', data);
+    }
+
   }
 };
 </script>

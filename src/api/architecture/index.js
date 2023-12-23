@@ -16,3 +16,12 @@ export function getPersonnelSimpleInfo(id) {
         data: {}
     })
 }
+
+// 获取员工信息
+export function getFindEmployeeFileById(id) {
+    return request({
+        url: `/personnel/info?id=${id}`,
+        method: 'get',
+        data: {}
+    })
+}

@@ -31,6 +31,7 @@
         </div>
       </div>
     </div>
+    <staffpeople></staffpeople>
   </div>
 </template>
 
@@ -39,6 +40,7 @@ import TitleComponent from '@/components/title-component/index.vue';
 import BlockComponent from './components/block.vue';
 import LineComponent from './components/line.vue';
 import GroupComponent from './components/group.vue';
+import staffpeople from './modal/staff_people.vue';
 export default {
   name: 'architecture-component',
   props: {
@@ -51,7 +53,8 @@ export default {
     TitleComponent,
     BlockComponent,
     LineComponent,
-    GroupComponent
+    GroupComponent,
+    staffpeople
   },
 
   computed: {
