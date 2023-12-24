@@ -63,7 +63,7 @@
           <el-image
               v-for="item in data.data.personnelList"
               :key="item?.id"
-              :src="item.avatar"
+              :src="item?.avatar"
           >
             <div slot="error" class="image-slot">
               <el-avatar :size="24" icon="el-icon-user-solid"></el-avatar>

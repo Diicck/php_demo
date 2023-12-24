@@ -4,7 +4,8 @@
     <!-- 使用名片组件 -->
     <CardInformation :data="data" :hoverData="hoverDataValue" />
     <!-- Slot reference 触发 Popover 显示的 HTML 元素-->
-    <div slot="reference" class="architecture-block" :class="['architecture-block-' + status]" @click="handleLoadData" v-if="data">
+<!--    <div slot="reference" class="architecture-block" :class="['architecture-block-' + status]" @click="handleLoadData" v-if="data">-->
+      <div slot="reference" class="architecture-block" :class="['architecture-block-' + status]" v-if="data">
       <div class="avatar-container">
         <el-avatar :src="data.avatar" class="avatar">
         </el-avatar>
