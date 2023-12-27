@@ -14,7 +14,7 @@ module.exports = defineConfig({
       // 当请求的路径以/api开头时，将请求代理到process.env.VUE_APP_API指定的地址
       //http://47.94.101.66:8083/ostudent/
       '/api': {
-        target: process.env.VUE_APP_API,
+        target: process.env.VUE_APP_API_2,
         // 启用跨域
         changeOrigin: true,
         // 将请求路径中的/api重写为/
@@ -24,7 +24,7 @@ module.exports = defineConfig({
       },
       // 当请求的路径以/upload开头时，将请求代理到process.env.VUE_APP_API指定的地址
       '/upload': {
-        target: process.env.VUE_APP_API,
+        target: process.env.VUE_APP_API_2,
         // 启用跨域
         changeOrigin: true,
         // 将请求路径中的/upload重写为/upload
