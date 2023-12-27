@@ -121,7 +121,7 @@ export default {
         font-size: 36px;
         margin-left: 10px;
         overflow: hidden;
-        text-wrap: nowrap;
+        text-wrap: normal;
         text-overflow: ellipsis;
         white-space: nowrap;
       }

@@ -102,7 +102,7 @@ export default {
     flex-direction: column;
     .text-name {
       overflow: hidden;
-      text-wrap: nowrap;
+      text-wrap: normal;
       text-overflow: ellipsis;
       white-space: nowrap;
       text-decoration: overline;
