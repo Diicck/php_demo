@@ -14,7 +14,7 @@
           <span class="text-name-left">名称</span>
           <span class="text-name-right">{{ data ? data.realName : hoverData.realName }}
           </span>
-          <img v-if="data ? data.sex == 1 : hoverData.sex == 1" class="sex sex-boy" src="../../../../assets/architecture/dialog/boy.png" alt="" />
+          <img v-if="data ? data.sex === 1 : hoverData.sex === 1" class="sex sex-boy" src="../../../../assets/architecture/dialog/boy.png" alt="" />
           <img v-else class="sex sex-girl" src="../../../../assets/architecture/dialog/girl.png" alt="" />
         </div>
 
@@ -41,11 +41,11 @@
       <div class="card-text-content-right">
         <span class="card-right-text">个人勋章</span>
         <div class="card-right-box">
-          <div v-for="item in data.medalList
-              ? data.medalList
-              : hoverData.medalList" :key="item.id" class="card-right-box-block">
-            <img :src="item.medalImg" style="width: 30px; height: 30px" alt="" />
-            <span>{{ item.medalName }}</span>
+          <div v-if="data && data.medalList || hoverData && hoverData.medalList">
+            <div v-for="item in data && data.medalList ? data.medalList : hoverData.medalList" :key="item.id" class="card-right-box-block">
+              <img :src="item.medalImg" style="width: 30px; height: 30px" alt="" />
+              <span>{{ item.medalName }}</span>
+            </div>
           </div>
         </div>
       </div>
