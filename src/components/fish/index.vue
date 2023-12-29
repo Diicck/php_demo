@@ -50,15 +50,6 @@ export default {
   },
   methods: {
     /**
-     * 滚动视图
-     */
-    handleJumpNext(bool = true) {
-      this.$refs['finshContent'].scrollBy({
-        left: bool ? 1600 : -1600,
-        behavior: 'smooth'
-      });
-    },
-    /**
      * 专业列表切换回调
      * @param {*} item
      */
