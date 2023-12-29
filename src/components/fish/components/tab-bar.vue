@@ -3,7 +3,7 @@
     <div class="fishbone-tabBar">
       <div class="taBar-item-con">
         <div class="taBar-item" :class="item.id === activeId ? 'taBar-item-active' : ''" v-for="item in fishbonelist" :key="item.id" @click="handleSelect(item)">
-          <img :src="item.id === activeId ? item.coverActive : item.cover" />
+          <img :src="item.id === activeId ? item.coverActive : item.cover"  alt="专业图片"/>
           <span :class="
                 item.id === activeId
                   ? 'taBar-item-text-active'
