@@ -16,6 +16,7 @@
             <p>{{ currentData.info }}</p>
           </div>
         </div>
+        <!-- 右侧区域 -->
         <div class="right-container">
           <!-- 鱼骨图组件 -->
           <FishboneComponent :list="fishboneData.list" :map="fishboneData.map" />
