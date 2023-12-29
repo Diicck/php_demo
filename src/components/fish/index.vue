@@ -63,7 +63,7 @@ export default {
      */
     async handleTabChange(item) {
       this.$set(this, 'currentData', item);
-      this.handleGetFishboneData(item.id);
+      await this.handleGetFishboneData(item.id);
 
       this.themBgColor = item.theme;
     },
@@ -74,7 +74,7 @@ export default {
       this.fishboneData.list = [];
       this.fishboneData.map = {};
       let res = await getFishbone(subjectId);
-      if (res.code != 200) {
+      if (res.code !== 200) {
         return;
       }
 
@@ -124,7 +124,7 @@ export default {
           display: block;
           width: 319px;
           height: 1100px;
-          border-radius: 32px 0px 0px 32px;
+          border-radius: 32px 0 0 32px;
           opacity: 0.8;
         }
         .icon-container {

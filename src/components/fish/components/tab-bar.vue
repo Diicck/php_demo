@@ -2,10 +2,10 @@
   <div>
     <div class="fishbone-tabBar">
       <div class="taBar-item-con">
-        <div class="taBar-item" :class="item.id == activeId ? 'taBar-item-active' : ''" v-for="item in fishbonelist" :key="item.id" @click="handleSelect(item)">
-          <img :src="item.id == activeId ? item.coverActive : item.cover" />
+        <div class="taBar-item" :class="item.id === activeId ? 'taBar-item-active' : ''" v-for="item in fishbonelist" :key="item.id" @click="handleSelect(item)">
+          <img :src="item.id === activeId ? item.coverActive : item.cover" />
           <span :class="
-                item.id == activeId
+                item.id === activeId
                   ? 'taBar-item-text-active'
                   : 'taBar-item-text'
               ">{{ item.subjectName }}</span>
