@@ -3,9 +3,9 @@
   <div class="finsh-node" v-if="data">
     <!-- 圆圈 -->
     <div>
-      <div :class="data.type != 'two-stage' ? 'circle' : 'circle-stage'" :style="{ backgroundColor: data.style.bgColor }"></div>
-      <div v-if="data.type != 'two-stage'">
-        <div :class="index % 2 == 0 ? 'dashedCircle' : 'dashedCircleturn'">
+      <div :class="data.type !== 'two-stage' ? 'circle' : 'circle-stage'" :style="{ backgroundColor: data.style.bgColor }"></div>
+      <div v-if="data.type !== 'two-stage'">
+        <div :class="index % 2 === 0 ? 'dashedCircle' : 'dashedCircleturn'">
           <div>
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" version="1.1" width="12" height="92" viewBox="0 0 12 92">
               <g>

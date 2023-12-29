@@ -161,13 +161,13 @@ export default {
     transform: translateY(-50%);
     border-radius: 50%;
     background: #fff;
-    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: center;
     align-items: center;
     /* 图片水平和垂直居中 */
     &:hover {
-      box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.7);
+      box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.7);
     }
     img {
       width: 24px;

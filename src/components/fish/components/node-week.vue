@@ -8,11 +8,10 @@
     ></NodeMonth>
     <!-- 圆圈 -->
     <div class="circle" :style="{ backgroundColor: data.style.bgColor }"></div>
-    <div :class="index % 2 == 0 ? 'dashedCircle' : 'dashedCircleturn'">
+    <div :class="index % 2 === 0 ? 'dashedCircle' : 'dashedCircleturn'">
       <div class="circle-small"></div>
       <svg
           xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
           fill="none"
           version="1.1"
           width="12"
